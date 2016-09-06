@@ -6,7 +6,7 @@
     var methodOverride = require('method-override');
     var port = process.env.PORT || 8080;              
 
-    mongoose.connect('mongodb://localhost/mongo-demo');
+    mongoose.connect('mongodb://heroku_pst3vgx9:pkm03t62ndrksatbtoo6k35om7@ds019946.mlab.com:19946/heroku_pst3vgx9');
     app.use(express.static(__dirname + '/public'));                
     app.use(morgan('dev'));                                    
     app.use(bodyParser.urlencoded({'extended':'true'}));           
