@@ -4,8 +4,10 @@
 }
 
 #thisOne img{
-	background-size: ;
-	background-position: bottom left;
+	width:100%;
+	height:100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 
@@ -19,6 +21,7 @@
 	font-family:'Pacifico', cursive;
 	color:white;
    -webkit-text-stroke: 1px black;
+   font-size:4.5vw;
 }
 
 .glyphicon-remove{

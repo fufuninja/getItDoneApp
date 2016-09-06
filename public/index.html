@@ -19,8 +19,9 @@
 <body ng-app="hungToDo" id="thisOne">
 
 <script>
-	var wallPapers = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg'];
+	var wallPapers = ['2.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '10.jpg', '12.jpg'];
 	$('body').css({'background-image': 'url(img/' + wallPapers[Math.floor(Math.random() *  wallPapers.length)] + ')'});
+	$('body').css({'background-size': 'cover'});
 </script>
 
 	<div ng-controller="mainController">
@@ -29,7 +30,7 @@
 			<br><br><br>
 			<span ng-show="loading" class="fa fa-spinner fa-spin fa-3x"></span>
 			<div id="displayOurTodos" ng-repeat="todo in todos">
-				<div style="font-weight:bold;color:white;font-family: 'Ubuntu', sans-serif;text-shadow:0px 1.5px 1.5px black">
+				<div style="font-weight:bold;color:white;font-family: 'Ubuntu', sans-serif;text-shadow:0px 1.5px 1.5px black;font-size:1.5vw;">
 					<li>
 						{{todo.text}}
 						<span class="glyphicon glyphicon-remove" style="color:red; top:3.5px" aria-hidden="true" ng-click="deleteTodo(todo._id)"></span>
@@ -39,9 +40,9 @@
 
 			<div class="col-lg-12" id="inputBar">
 				<form class="input-group" ng-submit="createToDo()">
-					<input type="text" class="form-control" placeholder="You better get these shits done before writing a new one." ng-model="formData.text" style="font-family: 'Baloo Bhaina', cursive;background:rgba(0,0,0,0.4)">
+					<input type="text" class="form-control" placeholder="You better get these shits done before writing a new one." ng-model="formData.text" style="font-family: 'Baloo Bhaina', cursive;background:rgba(0,0,0,0.45);height:60px;font-size:1.5vw;color:white;">
 					      <span class="input-group-btn">
-	      					  <button class="btn btn-default" type="submit" style="font-family:'Pacifico', cursive;">Pin it!</button>
+	      					  <button class="btn btn-default" type="submit" style="font-family:'Pacifico', cursive;height:60px;font-size:1.5vw;">Pin it!</button>
 	     				 </span>
 				</form>
 			</div>
