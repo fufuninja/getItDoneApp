@@ -4,6 +4,7 @@
     var morgan = require('morgan');            
     var bodyParser = require('body-parser');   
     var methodOverride = require('method-override');
+    var port = process.env.PORT || 5000;              
 
     mongoose.connect('mongodb://heroku_pst3vgx9:pkm03t62ndrksatbtoo6k35om7@ds019946.mlab.com:19946/heroku_pst3vgx9');
     app.use(express.static(__dirname + '/public'));                
@@ -15,3 +16,5 @@
 
     require('./routes')(app);
     
+    app.listen(5000);
+    console.log("App listening on port 5000");
